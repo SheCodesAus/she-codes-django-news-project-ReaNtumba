@@ -7,7 +7,21 @@
 
 {% block content %}
 
+
+{%if request.user.is_authenticated %}
+<div id="Welcome">
+
+    <h4>Welcome back {{user.username}}! </h4>
+</div>
+
+<div id="WriteStory" div>
+    <a href="{% url 'news:newStory' %}">{Write a New Story}</a>
+    {%endif%}
+
+</div>
+
 <h2>Latest News</h2>
+<h4>{{user.author}}</h4>
 
     <div id="latest-stories">
         {% if latest_stories %}
@@ -20,14 +34,14 @@
         {% endif %}
     </div>
 
-    <div id="all-stories">
-        {% if latest_stories %}
+    <!-- <div id="all-stories">
+        {% if all_stories %}
             {% for story in all_stories %}
                 {%include './storyCard.html' with story=story%}
             {% endfor %}
-        {% else %}6
+        {% else %}
             <p>No stories are available.</p>
         {% endif %}
-    </div>
+    </div> -->
 
 {%endblock %}

@@ -1,29 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 
 body {
-    background-color: rgb(240, 239, 239);
+    background-color:#CB0162;
+    
 }
+
+/* *{
+    border: black solid 2px;
+} */
 
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #000;
+    padding-left: 32%;
+    background-color:#FFBACD;
+    
 }
 
-img {
-    filter: grayscale(100%);
-}
 
 h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     text-decoration: none;
     font-size: 4rem;
-    margin: 0;
+    margin: 0px 10px 0px 0px;
+    display: flex;
+    justify-content:flex-start;
+}
+
+#header-link{
+    text-decoration: none;
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
+   font-family: 'Roboto Mono', monospace; 
+   text-align: center;
+   text-decoration: none;
 }
 
 h3 {
@@ -31,24 +43,129 @@ h3 {
     margin: 0;
 }
 
+
 #header-text {
-    flex-basis: 80%;
-    display: flex;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+#header-text .h1 {
+    margin-right: 50px;
 }
 
 nav {
-    flex-basis: 20%;
+    flex-basis: 35%;
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
+    justify-content: space-evenly;  
+}
+
+nav a {
+    font-weight: bold;
+    background-color: #DA467D;
+    padding: 1%;
 }
 
 a {
     margin: 2px;
-    text-decoration: none;
-    color: #000;
-}
+    color: rgb(12, 11, 12);
+
+} 
 
 a, p {
-    font-family: monospace;
+   font-family: 'Roboto Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+#forms{
+    display: flex;
+    justify-content: center;
+    background-color: #FFBACD;
+    padding: 5%;
+}
+
+
+#forms label {
+    min-width: 100px;
+    display: inline-block;
+
+}
+
+#forms input{
+   margin-right: 50%;
+}
+
+#forms textarea{
+    display: flex;
+    justify-content: center;
+}
+
+#submitbtn{
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+#WriteStory a{
+    display: flex;
+    justify-content: center;
+    background-color: #FFBACD; 
+    margin-left: 40%; 
+    margin-right: 40%
+}
+
+#Welcome  {
+    display: inline;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Form Styling */
+
+label{
+    display: flex;
+    justify-content: center;
+    background-color: #FFBACD;
+    margin-left: 40%;
+    margin-bottom: 5px;
+    margin-right: 40%;
+}
+
+input {
+    margin-left: 43%;
+    margin-right: 40%;
+}
+
+button {
+    margin-left: 48%;
+}
+
+form p{
+    text-align: center;
+}
+
+/* Create account styling */
+
+
+#accountStyle{
+    display: flex;
+    justify-content: center;
+    background-color: #FFBACD;
+    padding: 1%;
+}
+
+#accountStyle ul{
+    display: inline-block;
+    text-align: left;
+    padding-left: 35%;
+    
+}
+
+#accountStyle label{
+    padding-left: 4%;
 }
