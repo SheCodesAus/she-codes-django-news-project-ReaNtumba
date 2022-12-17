@@ -1,37 +1,25 @@
 {% extends "base.html" %}
 {% load static%}
-<!-- <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-
-<style>
-    #account-details ol{
-        text-align: center;
-    }
-
-    #storyList li{
-    text-align: center;
-    }
-</style> -->
 
 
 {% block content%}
 
-<div id="account-details">
-    <ol>
-        <h4>Author: {{user.username}}</h4>
-        <h4>Email address: {{user.email}}</h4>
-        <h4>Last Login: {{user.last_login}}</h4>
-    </ol>
+<div class ="account-details">
+    <h4>Your account details</h4>
+
+        <ul>
+            <h4>Author: {{user.username}}</h4>
+            <h4>Email address: {{user.email}}</h4>
+            <h4>Last Login: {{user.last_login}}</h4>
+        </ul>
+
+
+    <h4>List of Stories</h4>
+        {% for story in user.stories.all %}
+        <ul>
+            {{story.title}}
+            <!-- {% include "news/storyCard.html" with story=story %}   -->
+        </ul>
+        {% endfor %}
 </div>
-
-
-<div id = "storyList">Your stories</div>
-<div>
-    {% for story in user.stories.all %}
-    <ul>
-        {{story.title}}
-        <!-- {% include "news/storyCard.html" with story=story %}   -->
-    </ul>
-    {% endfor %}
-</div>
-
 {% endblock %}
