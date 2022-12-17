@@ -5,16 +5,18 @@
 {% block content%}
 
 <div class ="account-details">
-    <h4>Your account details</h4>
 
-        <ul>
-            <h4>Author: {{user.username}}</h4>
-            <h4>Email address: {{user.email}}</h4>
-            <h4>Last Login: {{user.last_login}}</h4>
-        </ul>
+        <h3>Your account details</h3>
+        <ol>
+            <style></style>
+            <h4 style="font-weight:normal">Author: {{user.username}}</h4>
+            <h4 style="font-weight:normal">Email address: {{user.email}}</h4>
+            <h4 style="font-weight:normal">Last Login: {{user.last_login}}</h4>
+            <br>
+            
+        </ol>
 
-
-    <h4>List of Stories</h4>
+        <h3>List of Stories</h3>
         {% for story in user.stories.all %}
         <ul>
             {{story.title}}

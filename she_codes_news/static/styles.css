@@ -171,17 +171,17 @@ Account details styling */
 
 .account-details{
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    /* align-content: space-between; */
     background-color: #FFBACD;
     margin: 20px 100px 5px 100px;
+    font-weight: bold;
+    
 }
 
-#details{
-    margin: 5px
-}
-
-
-#storyList{
-margin: 5px;
+.account-details ul{
+    display: flex;
+    align-items: flex-start;
+    font-weight: normal;
 }
