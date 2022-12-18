@@ -69,12 +69,13 @@ body{
 
 #story-content {
     text-align: justify;
+    background-color: #FFBACD;
 }
 
 #story-content img {
     float: right;
     margin: 0 0 10px 10px;
-    width: 40%;
+    width: 35%;
 }
 
 #story-wrapper {
@@ -88,9 +89,8 @@ body{
 }
 
 #story-wrapper h2 {
-    display: flex;
-    align-items: center;
-    padding-left: 25%;
+    font-size: 20px;
+    text-align: center;
 }
 
 #story-content {
